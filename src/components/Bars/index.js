@@ -14,6 +14,7 @@ const Bar = styled.rect`
   fill: ${props => props.color};
   opacity: ${props => props.opacity};
   stroke: none;
+  cursor: ${props => (props.onClick ? "pointer" : "auto")};
 `
 
 Bar.displayName = "Bar"
@@ -25,6 +26,7 @@ class Bars extends React.Component {
       barsMargin,
       barsColor,
       data,
+      onClick,
       onHover,
       getX,
       getY,
@@ -48,6 +50,7 @@ class Bars extends React.Component {
             y={getY(point.y)}
             width={getX(barsWidth + minX)}
             height={round(getY(minY) - getY(point.y), 2)}
+            onClick={e => onClick(point, e)}
             onMouseEnter={e => onHover(point, e)}
             onMouseLeave={() => onHover(null, null)}
           />
@@ -75,6 +78,7 @@ Bars.propTypes = {
   labelsWidthY: PropTypes.number,
   minX: PropTypes.number.isRequired,
   minY: PropTypes.number.isRequired,
+  onClick: PropTypes.func,
   onHover: PropTypes.func,
   unitWidth: PropTypes.number,
 }

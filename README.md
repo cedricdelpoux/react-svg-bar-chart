@@ -77,6 +77,7 @@ const MyComponent = () => (
 | pathWidth            | Number                | Path width                                                                        | 1                    |
 | pointsColor          | String                | Points color                                                                      | "#fff"               |
 | pointsIsHoverOnZone  | Boolean               | `onHover` function callback called on zone hover instead of points hover          | false                |
+| onClick              | Function              | Callback when one bar is click                                                    | (point, event) => {} |
 | onHover              | Function              | Callback when one point is hovered                                                | (point, event) => {} |
 | pointsRadius         | Number                | Points radius                                                                     | 4                    |
 | pointsStrokeColor    | String                | Points stroke color                                                               | "#34495e"            |

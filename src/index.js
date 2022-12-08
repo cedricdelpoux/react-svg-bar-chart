@@ -2,16 +2,16 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
+import Axis from "./components/Axis"
+import Bars from "./components/Bars"
+import Grid from "./components/Grid"
+import Labels from "./components/Labels"
+import Points from "./components/Points"
+
 const Svg = styled.svg`
   display: block;
   overflow: visible;
 `
-
-import Grid from "./components/Grid"
-import Bars from "./components/Bars"
-import Points from "./components/Points"
-import Axis from "./components/Axis"
-import Labels from "./components/Labels"
 
 const UNIT_WIDTH = 1
 
